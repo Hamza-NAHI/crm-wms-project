@@ -10,3 +10,7 @@
 !src/**
 !docker/
 !docker/nginx.conf
+**/.env
+**/.env.*
+**/*.pem
+**/*.key

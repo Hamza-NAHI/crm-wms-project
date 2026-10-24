@@ -9,12 +9,14 @@ Verified on 24 October 2026 against the existing CRM WMS source.
 | `npm run typecheck` | Passed. |
 | `npm test` | Passed all four engine tests: five-carton dispatch, allocation invariants, receiving/capacity, continuous movement. |
 | `npm run build` | Passed; existing large JavaScript bundle warning remains. |
+| Production frontend smoke check | Passed independently of Docker: Vite preview returned HTTP 200 at http://127.0.0.1:4173/; browser inspection confirmed the dashboard and warehouse scene render, with no captured console errors on initial load. |
 | Lint | Not configured; not run. |
 | `npm ls --depth=0` | Passed; direct dependencies resolve. |
 | `git diff --check` | Passed before commit. |
 | `docker compose config --quiet` | Passed; one web service, loopback port 3000 to container 8080. |
 | Docker build and startup | Blocked by host engine availability. `docker compose build` and `docker compose up --build -d` both fail before a build/container can start. |
 | Docker container health/logs | Not verified. `docker compose ps` and `docker compose logs --tail=30` cannot contact the engine. |
+| GitHub publication | Existing empty `Hamza-NAHI/crm-wms-project` repository supplied by the owner was used. Its public visibility and main default branch were preserved. Source, Docker files, README, and this report were pushed and the remote file tree was verified through the GitHub connection. |
 
 Docker CLI 27.3.1 and Compose v2.29.7 are installed. Docker Desktop was started, but the selected `desktop-linux` context reports:
 
